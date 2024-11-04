@@ -38,17 +38,17 @@ function moveMeteoros()
 end
 
 function move14bis()
-    if love.keyboard.isDown('w') then
-        aviao_14bis.y = aviao_14bis.y - 1
+    if love.keyboard.isDown('up') then
+        aviao_14bis.y = aviao_14bis.y - 2
     end
-    if love.keyboard.isDown('s') then
-        aviao_14bis.y = aviao_14bis.y + 1
+    if love.keyboard.isDown('down') then
+        aviao_14bis.y = aviao_14bis.y + 2
     end
-    if love.keyboard.isDown('a') then
-        aviao_14bis.x = aviao_14bis.x - 1
+    if love.keyboard.isDown('left') then
+        aviao_14bis.x = aviao_14bis.x - 2
     end
-    if love.keyboard.isDown('d') then
-        aviao_14bis.x = aviao_14bis.x + 1
+    if love.keyboard.isDown('right') then
+        aviao_14bis.x = aviao_14bis.x + 2
     end
 end    
 
@@ -64,7 +64,7 @@ function love.load()
 end
 
 function love.update(dt)
-    if love.keyboard.isDown('w', 'a', 's', 'd') then
+    if love.keyboard.isDown('up', 'left', 'down', 'right') then
         move14bis()
     end
 
